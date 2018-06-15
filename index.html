@@ -31,9 +31,13 @@
                             <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                         </ul>
                         <span class="navbar-text">
+                            <!--
                             <a data-toggle="modal" data-target="#loginmodal">
                                 <span class="fa fa-sign-in"></span> Login
                             </a>
+                            -->
+                            <!--remove data-* attributes, Assignment 4- task 1 -->
+                            <a id="loginModalButton"><span class="fa fa-sign-in"></span> Login</a>
                         </span>
             </div>
            
@@ -91,8 +95,10 @@
                     data-html="true" title="Or call us at <br><strong>+852 345678</strong>"
                     data-placement="bottom">Reserve Table</a>-->
                     <!-- Assignment 3, Task 3 -->
-                    <button type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reserveModal">
-                    Reserve Table</button>
+                    <!--<button type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reserveModal">
+                    Reserve Table</button>-->
+                    <!--remove data-* attributes, Assignment 4- task 1 -->
+                    <button type="button" class="btn btn-warning btn-sm btn-block" id="reserveTableButton">Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -376,43 +382,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-    -->
-    <script>
-        /* js code for play and pause buttons on carousel
-        $(document).ready(function(){
-            $('#mycarousel').carousel({interval: 2000});
-            $('#carousel-pause').click(function(){
-                $('#mycarousel').carousel('pause');
-            });
-            $('#carousel-play').click(function(){
-                $('#mycarousel').carousel('cycle');
-            });
-        });
-        */
-        //js code for single play/pause button on carousel
-
-        $(document).ready(function() {
-            $('#mycarousel').carousel({interval: 2000});
-            $('#carouselButton').click(function() {
-                if($('#carouselButton').children('span').hasClass('fa-pause')) {
-                    $('#mycarousel').carousel('pause');
-                    $('#carouselButton').children('span').removeClass('fa-pause');
-                    $('#carouselButton').children('span').addClass('fa-play');
-                }
-                else {
-                    $('#mycarousel').carousel('cycle');
-                    $('#carouselButton').children('span').removeClass('fa-play');
-                    $('#carouselButton').children('span').addClass('fa-pause');
-                }
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
